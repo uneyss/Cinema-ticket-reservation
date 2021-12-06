@@ -72,11 +72,16 @@ p.text span {
     color: #f6eb6f;
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
-    padding-right: 2px;
+    margin: 0 2px;
 }
 
 .info-text{
     background-color: rgb(54, 54, 54);
     padding: 0.75px;
     border-radius: 5px;
+}
+
+#movieText{
+    color: #f6eb6f;
+    
 }
