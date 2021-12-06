@@ -47,6 +47,11 @@ function calculateTotal(){
     amount.innerText = selectedSeatCount * select.value
     movie_Text.innerText = text
 
+    console.log('Selected Seat Count :', selectedSeatCount)
+    console.log('Selected Seats :', selectedSeats)
+
+    console.log('Selected Seats Array :', selectedSeatsArr)
+    console.log(' Seats Array :', seatsArr)
     saveToLocalStorage(selectedSeatIndexs)
 }
 
@@ -62,14 +67,19 @@ function getFromLocalStorage(){
         })
     }
 
+    console.log('Selected Seats Local Storage :', selectedSeatsLs)
+
     const selectedMovieIndexLs = localStorage.getItem('SelectedMovie')
 
     if(selectedMovieIndexLs != null){
         select.selectedIndex = selectedMovieIndexLs
     }
+    console.log('Selected Movie Index Local Storage :', selectedMovieIndexLs)
 }
 
 function saveToLocalStorage(indexs){
     localStorage.setItem('SelectedSeats', JSON.stringify(indexs))
     localStorage.setItem('SelectedMovie', select.selectedIndex)
+
+    
 }
